@@ -71,6 +71,7 @@ public class Exporter {
                 StringBuilder sb = new StringBuilder();
                 sb.append("<?xml>\n");
                 sb.append("<metadata>\n");
+                sb.append("<sourcePath>" + path + "</sourcePath>\n");
                 for (Property property : properties) {
                     String qName = property.getQueryName();
                     String value = property.getValuesAsString();
