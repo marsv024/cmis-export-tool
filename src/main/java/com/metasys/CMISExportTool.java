@@ -40,8 +40,10 @@ public class CMISExportTool {
             processExport(line.getOptionValue("url"), line.getOptionValue("u"), line.getOptionValue("p"), line);
         } catch (ParseException exp) {
             logger.log(Level.SEVERE, "Unexpected exception:" + exp.getMessage());
+            exp.printStackTrace();
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Unexpected exception:" + e.getMessage());
+            e.printStackTrace();
         }
     }
 
